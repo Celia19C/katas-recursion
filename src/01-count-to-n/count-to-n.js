@@ -6,8 +6,9 @@
  * @example
  * countTo(5) // [1, 2, 3, 4, 5]
  */
-
-const countTo = number => (number < 1) ? [] : [...countTo(number - 1), number]
+function countTo(number) {
+  // TODO: implement
+}
 
 module.exports = {
   countTo
