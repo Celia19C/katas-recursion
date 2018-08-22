@@ -5,9 +5,17 @@
  * @example
  * stringReverse("hola que tal") // "lat euq aloh"
  */
-function stringReverse(text) {
-  // TODO: implement
+function reverseString(text) {
+  if (text <= 1)
+    return text;
+
+  return text[text.length - 1] + reverseString(text.substring(0, text.length - 1));
 }
+
+//Refactorización
+
+const reverseString = text => { return text <= 1 ? text : text[text.length - 1] + reverseString(text.substring(0, text.length - 1)) }
+
 
 module.exports = {
   stringReverse

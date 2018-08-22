@@ -7,6 +7,15 @@
  * countDigits(3124) // 4
  */
 
+//Versión mejor (sin refactorizar)
+function countDigits(number) {
+  if (Math.abs(number) < 10) {
+    return 1
+  }
+  return countDigits(number / 10) + 1
+ }
+///////////////
+
 var digits= 0;
 function countDigits(number) {
   digits++;
