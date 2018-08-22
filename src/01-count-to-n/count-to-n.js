@@ -26,6 +26,7 @@ function countTo(number) {
   else {
     return []
   }
+}
 
   //REFACTORIZACIÓN 2
   
