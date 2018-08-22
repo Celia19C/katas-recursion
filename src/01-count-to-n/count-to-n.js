@@ -7,8 +7,29 @@
  * countTo(5) // [1, 2, 3, 4, 5]
  */
 function countTo(number) {
-  // TODO: implement
+  if (number === 0){
+    return []
+  }
+  if (number === 1){
+    return [number]
+  }
+  if (number > 1) {
+    return countTo(number-1).concat(number)
+  }
 }
+
+//REFACTORIZACIÓN 1
+function countTo(number) {
+  if (number > 0){
+    return countTo(number-1).concat(number)
+  } 
+  else {
+    return []
+  }
+
+  //REFACTORIZACIÓN 2
+  
+  const countTo =  number => number > 0 ? countTo(number-1).concat(number) : []
 
 module.exports = {
   countTo
