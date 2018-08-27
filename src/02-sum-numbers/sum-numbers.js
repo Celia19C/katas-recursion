@@ -6,9 +6,23 @@
  * // 1 + 2 + 3 + 4 + 5 = 15
  * sumNumbers(5) // 15
  */
+
+
 function sumNumbers(number) {
-  // TODO: implement
+  if (number == 1) {
+    return 1
+  }
+  else {
+  return sumNumbers(number - 1) + number 
+  }
 }
+
+
+//REFACTORIZACIÓN
+
+const sumNumbers = (number) => (number == 1) ? 1 : sumNumbers(number - 1) + number
+
+
 
 module.exports = {
   sumNumbers
